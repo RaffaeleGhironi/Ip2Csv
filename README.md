@@ -23,3 +23,6 @@
 
 - Nella versione windows puo essere avviato con un semplice doppio click sull'eseguibile oppure da shell.
 - Nella versione Linux bisogna dargli le autorizzazioni per essere lanciato come eseguibile(777) e poi avviarlo con ./Ip2Csv.itm
+
+- <img width="926" height="652" alt="Ip2Csv" src="https://github.com/user-attachments/assets/87905cc9-9873-4573-96f4-2d93e0a8daee" />
+
