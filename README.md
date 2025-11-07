@@ -1,2 +1,25 @@
 # Ip2Csv
-Programma è nato per l'esigenza di dover pingare un certo numero di telecamere e creare un file csv con i risultati dei ping.
+- Questo programma è nato per l'esigenza di dover pingare un certo numero di telecamere e creare un file csv con i risultati dei ping.
+- Il risultato dei ping verrà messo in un file csv che è simile ai file csv esportati dal software "Dude" di Mikrotik.
+- Il file d'uscita csv creato dovrà poi essere elaborato con un ulteriore programma che creerà un file xlxs appositamente formattatato.
+
+- Il programma all'avvio vi chiederà di inserire il nome del file dove sono contenuti i nomi e gli ip delle telecamre da pingare.
+  Questo file deve contere i seguenti parametri  "Nome Tlc","IP Tlc","Ack" . Il campo "Ack" va impostato su 1/0 se si vuole o meno pingare.
+  Se non inserite il nome del file da aprire il programma cercherà il file "cams.csv".
+
+- Il secondo parametro che viene chiesto è il nome del file d'uscita con i risultati dei ping , se non viene specificato il nome verrà
+  usato il nome "Cliente.csv"
+
+- Il terzo parametro richiesto è il debug , rispondento s/n si avranno informazioni immediate sull'esito dei vari ping.
+  Se dovessi scegliere di non vedere il debug , quando il programma finisce tutti i ping mi mostra una tabella riassuntiva con i risultati.
+
+- Il programma ora pingherà ogni indirizzo ip facendo 5 richieste .
+  Se i pacchetti persi superano il 50% l'ip verrà considerato "Down" e sul campo "notes" del file d'uscita verra segnalata la percentuale dei pacchetti persi.
+  Se l'ip viene considerato "UP" sul campo "notes" del file d'uscita verra segnalata il tempo medio di risposta in ms.
+
+
+
+- Questo programma è disponibile con un eseguibile windows "Ip2Csv.exe" oppure in versione linux "Ip2csv.itm"
+
+- Nella versione windows puo essere avviato con un semplice doppio click sull'eseguibile oppure da shell.
+- Nella versione Linux bisogna dargli le autorizzazioni per essere lanciato come eseguibile(777) e poi avviarlo con ./Ip2Csv.itm
